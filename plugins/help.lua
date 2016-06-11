@@ -24,9 +24,6 @@ if is_momod(msg) or is_owner(msg) or is_sudo(msg) then
 	  return "You cant see /help text"
 end
 	
-	if is_support(msg) then
-	  return "This is support"
-	end
 end
 return {
 advan = "http://github.com/janlou",
