@@ -25,6 +25,7 @@ cd AdvanSource
 ***
 ```bash
 chmod +x fix.sh
+chmod +x steady.sh
 chmod +x start.sh
 ```
 ***
