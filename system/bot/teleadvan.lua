@@ -225,6 +225,8 @@ function create_config( )
     "broadcast",
     "invite",
     "getplug",
+    "setbye",
+    "setwlc",
     "addplug",
     "saveplug",
     "savefile",
