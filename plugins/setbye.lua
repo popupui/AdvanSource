@@ -15,6 +15,7 @@ local function run(msg, matches)
    
    local bye = io.open("./adv/bye/"..msg.to.id..".txt", "r")
    local send = bye:read("*all")
+ if is_momod(msg) or is_owner(msg) or is_sudo(msg) then
    if matches[1] == "chat_del_user" or matches[1] == "channel_kick" then
       return send
     else
@@ -27,6 +28,10 @@ local function run(msg, matches)
     send_msg(get_receiver(msg), say, ok_cb, false)
    return del
    end
+   
+  else
+   return "فقط مخصوص ادمین ها"
+ end
 end
   
   function problem(dict)
