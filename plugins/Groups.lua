@@ -58,6 +58,12 @@ local function run(msg, matches)
          return chat_list(msg)
       end
  end
+ 
+ if matches[1] == 'help' and msg.to.type == 'user' then
+		text = "Welcome to my bot!\n\nTo get a list of bot groups use /chats or /groups for list of chats.\n\n"
+     	return text
+end
+
  end
 return {
     description = "See link of a group and groups list",
@@ -67,6 +73,11 @@ return {
     	"Powered by: @AdvanTM",
     	"CopyRight all right reserved",
     },
-patterns = {"^[!#/]([Ll]ink) (.*)$","^[!#/]([Gg]roups)$","^[!#/]([Cc]ats)$"},
+patterns = {
+	"^[!#/]([Ll]ink) (.*)$",
+	"^[!#/]([Gg]roups)$",
+	"^[!#/]([Cc]ats)$",
+	"^[!#/]([Hh]elp)$",
+	},
 run = run
 }
