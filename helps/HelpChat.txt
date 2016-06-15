@@ -69,17 +69,13 @@ Will set id as owner
 Set [value] as flood sensitivity
 !stats
 Simple message statistics
-!save [value] <text>
-Save <text> as [value]
-!get [value]
-Returns text of [value]
+!antiflood [enable|disable]
+enable or disable anti flood
 !clean [modlist|rules|about]
 Will clear [modlist|rules|about] and set it to nil
 !res [username]
 returns user id
 "!res @username"
-!log
-Returns group logs
 !banlist
 will return group ban list
 **You can use "#", "!", or "/" to begin all commands
