@@ -1,3 +1,4 @@
+
 SuperGroup Commands:
 !info
 Displays general info about the SuperGroup
@@ -40,10 +41,8 @@ Sets the chat photo
 Sets the chat rules
 !setabout
 Sets the about section in chat info(members list)
-!save [value] <text>
-Sets extra info for chat
-!get [value]
-Retrieves extra info for chat by value
+!antiflood [enable|disable]
+enable or disable anti flood
 !semat
 see post of yourself
 !note
