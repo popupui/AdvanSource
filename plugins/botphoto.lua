@@ -33,6 +33,7 @@ local function run(msg, matches)
     	redis:set("bot:photo", "waiting")
     	return 'Please send me bot photo now'
 end
+end
 
 return {
   patterns = {
