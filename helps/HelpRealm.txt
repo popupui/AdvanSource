@@ -5,22 +5,6 @@ Create a group
 Create a realm
 !setname [Name]
 Set realm name
-!setabout [group|sgroup] [GroupID] [Text]
-Set a group's about text
-!setrules [GroupID] [Text]
-Set a group's rules
-!lock [GroupID] [setting]
-Lock a group's setting
-!unlock [GroupID] [setting]
-Unock a group's setting
-!settings [group|sgroup] [GroupID]
-Set settings for GroupID
-!wholist
-Get a list of members in group/realm
-!who
-Get a file of members in group/realm
-!type
-Get group type
 !semat
 see post of a member
 !note
@@ -42,6 +26,8 @@ Get a logfile of current group or realm
 !broadcast [text]
 !broadcast Hello !
 Send text to all groups
+!antiflood [enable|disable]
+enable or disable anti flood
 !saveplug
 (with reply on a document) you can save plugin in server
 !savefile adress filename
