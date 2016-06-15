@@ -10,6 +10,7 @@ if matches[1] == "markread" then
     	end
     	return
 end
+end
 
 return {
   patterns = {
