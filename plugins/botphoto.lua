@@ -37,6 +37,7 @@ end
 return {
   patterns = {
 	"^[#!/](setbotphoto)$",
+	"%[(photo)%]",
   },
   run = run,
   pre_process = pre_process
