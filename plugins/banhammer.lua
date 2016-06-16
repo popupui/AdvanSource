@@ -136,7 +136,7 @@ local function run(msg, matches)
 local support_id = msg.from.id
  if matches[1]:lower() == 'id' and msg.to.type == "chat" or msg.to.type == "user" then
     if msg.to.type == "user" then
-      return "bot #ID: "..msg.to.id.. "\n\nYour #ID: "..msg.from.id
+      return "Bot ID: "..msg.to.id.. "\n\nYour ID: "..msg.from.id
     end
     if type(msg.reply_id) ~= "nil" then
       local print_name = user_print_name(msg.from):gsub("‮", "")
@@ -254,7 +254,6 @@ if matches[1]:lower() == 'kick' then
 		end
     local user_id = matches[2]
     local chat_id = msg.to.id
-    print("sexy")
 		local print_name = user_print_name(msg.from):gsub("‮", "")
 		local name = print_name:gsub("_", "")
 		savelog(msg.to.id, name.." ["..msg.from.id.."] kicked user ".. matches[2])
