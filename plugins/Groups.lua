@@ -74,7 +74,7 @@ return {
 patterns = {
 	"^[!#/]([Ll]ink) (.*)$",
 	"^[!#/]([Gg]roups)$",
-	"^[!#/]([Cc]ats)$",
+	"^[!#/]([Cc]hats)$",
 	"^[!#/]([Hh]elp)$",
 	},
 run = run
