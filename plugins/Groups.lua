@@ -47,8 +47,6 @@ local function run(msg, matches)
          	return "Group not found"
          end
     end
-  else
-   return "Just for sudo!"
   end
 
      if matches[1] == 'groups' or matches[1] == 'chats' then
