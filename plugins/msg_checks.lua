@@ -241,21 +241,17 @@ if is_chat_msg(msg) or is_super_group(msg) then
 				local user_id = msg.from.id
 				local _nl, ctrl_chars = string.gsub(msg.text, '%c', '')
 				if string.len(msg.from.print_name) > 70 or ctrl_chars > 40 and lock_group_spam == 'yes' then
-					savelog(msg.to.id, name_log.." ["..msg.from.id.."] joined and Service Msg deleted (#spam name)")
 					delete_msg(msg.id, ok_cb, false)
 					if strict == "yes" or to_chat then
-						savelog(msg.to.id, name_log.." ["..msg.from.id.."] joined and kicked (#spam name)")
 						kick_user(msg.from.id, msg.to.id)
 					end
 				end
 				local print_name = msg.from.print_name
 				local is_rtl_name = print_name:match("‮")
 				if is_rtl_name and lock_rtl == "yes" then
-					savelog(msg.to.id, name_log.." User ["..msg.from.id.."] joined and kicked (#RTL char in name)")
 					kick_user(user_id, msg.to.id)
 				end
 				if lock_member == 'yes' then
-					savelog(msg.to.id, name_log.." User ["..msg.from.id.."] joined and kicked (#lockmember)")
 					kick_user(user_id, msg.to.id)
 					delete_msg(msg.id, ok_cb, false)
 				end
@@ -263,10 +259,8 @@ if is_chat_msg(msg) or is_super_group(msg) then
 			if action == 'chat_add_user' and not is_momod2(msg.from.id, msg.to.id) then
 				local user_id = msg.action.user.id
 				if string.len(msg.action.user.print_name) > 70 and lock_group_spam == 'yes' then
-					savelog(msg.to.id, name_log.." ["..msg.from.id.."] added ["..user_id.."]: Service Msg deleted (#spam name)")
 					delete_msg(msg.id, ok_cb, false)
 					if strict == "yes" or to_chat then
-						savelog(msg.to.id, name_log.." ["..msg.from.id.."] added ["..user_id.."]: added user kicked (#spam name) ")
 						delete_msg(msg.id, ok_cb, false)
 						kick_user(msg.from.id, msg.to.id)
 					end
@@ -274,11 +268,9 @@ if is_chat_msg(msg) or is_super_group(msg) then
 				local print_name = msg.action.user.print_name
 				local is_rtl_name = print_name:match("‮")
 				if is_rtl_name and lock_rtl == "yes" then
-					savelog(msg.to.id, name_log.." User ["..msg.from.id.."] added ["..user_id.."]: added user kicked (#RTL char in name)")
 					kick_user(user_id, msg.to.id)
 				end
 				if msg.to.type == 'channel' and lock_member == 'yes' then
-					savelog(msg.to.id, name_log.." User ["..msg.from.id.."] added ["..user_id.."]: added user kicked  (#lockmember)")
 					kick_user(user_id, msg.to.id)
 					delete_msg(msg.id, ok_cb, false)
 				end
