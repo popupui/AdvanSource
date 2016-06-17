@@ -691,6 +691,7 @@ function is_log_group(msg)
   end
 end
 
+--Trying to increase 5% of speed bye @janlou
 function savelog(group, logtxt)
 
 local text = (os.date("[ %c ]=>  "..logtxt.."\n \n"))
