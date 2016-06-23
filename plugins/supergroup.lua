@@ -1128,7 +1128,7 @@ local function run(msg, matches)
 		if not data[tostring(msg.to.id)] then
 			return
 		end
-		if matches[1] == "info" then
+		if matches[1] == "gap" then
 			if not is_owner(msg) then
 				return
 			end
@@ -1927,7 +1927,7 @@ return {
 	"^[#!/]([Aa]dd)$",
 	"^[#!/]([Rr]em)$",
 	"^[#!/]([Mm]ove) (.*)$",
-	"^[#!/]([Ii]nfo)$",
+	"^[#!/]([Gg]ap)$",
 	"^[#!/]([Aa]dmins)$",
 	"^[#!/]([Oo]wner)$",
 	"^[#!/]([Mm]odlist)$",
