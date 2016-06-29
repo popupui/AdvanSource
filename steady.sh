@@ -144,7 +144,7 @@ echo -e "$bld$f4 ATTACHING TMUX AS DAEMON...$rst"
 # It is recommended to clear cli status always before starting the bot
 rm ../.telegram-cli/state  > /dev/null 
 # Nested TMUX sessions trick 
-TMUX= tmux new-session -d -s $BOT "./launch.sh"
+TMUX= tmux new-session -d -s $BOT "./start.sh"
 sleep 1.3
 
 CLIPID=`ps -e | grep telegram-cli | head -1 | sed 's/^[[:space:]]*//' | cut -f 1 -d" "`
@@ -200,7 +200,7 @@ while true; do
 		kill $CLIPID
 		tmux kill-session -t $BOT
 	
-		TMUX= tmux new-session -d -s $BOT "./launch.sh"
+		TMUX= tmux new-session -d -s $BOT "./start.sh"
 		sleep 1
 		
 		CLIPID=`ps -e | grep telegram-cli | head -1 | sed 's/^[[:space:]]*//' | cut -f 1 -d" "`
@@ -348,7 +348,7 @@ sleep 1
 echo -e "$bld$f4 ATTACHING SCREEN AS DAEMON...$rst"
 # Better to clear cli status before
 rm ../.telegram-cli/state  > /dev/null 
-screen -d -m bash launch.sh
+screen -d -m bash start.sh
 
 sleep 1.3
 
@@ -420,7 +420,7 @@ sleep 5
 		kill $CLIPID
 		kill $SCREEN
 		
-		screen -d -m bash launch.sh
+		screen -d -m bash start.sh
 		sleep 1
 		
 		CLIPID=`ps -e | grep telegram-cli | sed 's/^[[:space:]]*//' | cut -f 1 -d" "`
@@ -470,7 +470,7 @@ exit 1
 
 function screen_detached {
 clear
-screen -d -m bash launch.sh
+screen -d -m bash start.sh
 echo -e "\e[1m"
 echo -e ""
 echo "Bot running in the backgroud with SCREEN"
