@@ -24,7 +24,7 @@ local function run(msg,matches)
     end
     if matches[1] == "tophoto" then
     	redis:set("sticker:photo", "waiting")
-    	return 'Please send your sticker now'
+    	return 'لطفا عکس خود را ارسال نمایید'
     end
 end
 
